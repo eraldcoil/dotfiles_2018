@@ -30,6 +30,8 @@ set backspace=indent,eol,start
 set completeopt=longest
 set cursorline
 set expandtab
+set shiftwidth=4
+set tabstop=4
 set history=50
 set hls
 set incsearch
@@ -42,7 +44,6 @@ set novisualbell
 set number
 set ruler
 set scrolloff=5
-set shiftwidth=4
 set shortmess+=r
 set showmode
 set showcmd
