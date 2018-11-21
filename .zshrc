@@ -31,6 +31,7 @@ alias nn="nvim ~/.config/nvim/init.vim"
 alias clr="clear"
 alias pac="pacman"
 alias ..="cd .."
+alias glg="git lg"
 
 #launching a shell and quits after 1 command
 if [[ -n ${LAUNCHER} ]]; then
