@@ -1,0 +1,83 @@
+#mod1 + {h,j,k,l}
+#	waitron window_move {-50 0, 0 50, 0 -50, 50 0}
+
+#mod1 + shift + {h,j,k,l}
+#	waitron window_resize {-50 0, 0 50, 0 -50, 50 0}
+
+# mod1 + {Left,Down,Up,Right}
+
+#mod1 + shift + q 
+#	waitron wm_quit 0
+
+#mod1 + Escape
+#	systemctl suspend
+
+#mod1 + g
+#	waitron window_snap middle
+
+#mod1 + x
+#	waitron window_maximize
+
+#mod1 + shift + q
+#	waitron window_close; \
+#	waitron window_focus $(lsw | tail -1)
+
+#mod1 + v
+#	waitron window_cycle_in_group
+
+#mod1 + c
+#	waitron window_rev_cycle_in_group
+
+#mod1 + Tab
+#	waitron window_cycle
+
+# mod1 + shift + Tab
+# 	waitron window_rev_cycle
+
+# alt + {1-9}
+#         bash ~/.config/scripts/grouptoggle.sh {1-9} show
+#         waitron group_add_window {1-9}
+
+# alt + shift + {1-9}
+#         bash ~/.config/scripts/grouptoggle.sh {1-9} hide
+#         waitron group_add_window {1-9}
+
+# alt + {1,2,3,4,5,6}
+#   groaw -t {1,2,3,4,5,6}
+
+mod1 + {1-9}
+    ~/.config/scripts/switchdesktop.sh {1-9}
+
+# mod1 + {left,down,up,right}
+#     ~/wmutils/focus.sh {west, south, north, east} $(pfw)
+
+# mod1 + shift + left
+#     ~/focus.sh prev 
+#
+# mod1 + shift + right 
+#     ~/focus.sh next 
+
+#mod1 + ctrl + r
+#	waitron group_remove_window
+
+#mod1 + shit + Return
+#	bash /home/prashant/.t.sh
+
+mod1 + Return
+    urxvt 
+
+#mod1 + alt + t 
+#	bash ~/.datetoggle.sh&
+
+#mod1 + @space
+#       urxvt -g 90x1+595+479 -e bash -c 'LAUNCHER=true /bin/zsh -i -t'
+
+#mod1 + shift + f
+#	tdrop -a -h 309 -w 721 -x 1183 -y 755 -n 1 -f "-e ranger" urxvt
+
+#mod1 + shift + m
+#	tdrop -a -h 309 -w 721 -x 10 -y 755 -n 2 -f "-e ncmpcpp" urxvt
+
+#mod1 + alt + s
+#	scrot -z ~/screenshots/$(date +%F-%T).png; \
+#	dunstify -r 1 "screenshot taken"
